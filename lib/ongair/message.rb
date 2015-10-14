@@ -14,6 +14,7 @@ module Ongair
     attribute :phone_number, String
     attribute :caption, String
     attribute :sent, Boolean
+    attribute :thread, Boolean
 
     def type
       ActiveSupport::StringInquirer.new self.notification_type.to_s.sub('Received', '').downcase
