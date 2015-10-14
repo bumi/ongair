@@ -1,7 +1,7 @@
-# Ongair
+# Ongair API wrapper
 
-A ruby wrapper around the Ongair API
-
+A ruby wrapper for the [ongair.im](http://ongair.im) API that allows you to send and receive chat messages.  
+Currently ongair supports whatsapp and wechat. 
 
 ## Installation
 
@@ -11,10 +11,6 @@ Add this line to your application's Gemfile:
 gem 'ongair'
 ```
 
-And then execute:
-
-    $ bundle
-
 Or install it yourself as:
 
     $ gem install ongair
@@ -23,11 +19,35 @@ Or install it yourself as:
 
 ```ruby
 
+  # configure your API token
   Ongair.configure do |c|
     c.token = ''
   end
 
-  message = Ongair::Message.new(phone_number: 'number', text: 'hello world')
-  message.deliver!
+  # receiving messages:
+  message = Ongair::Message.new(params) # simply initialize a new message with the params from the ongair webhook
+  message.type.image?
+  message.text
+  message.image
+  # see lib/ongair/message.rb for details
+
+  # sending messages:
+  message = Ongair::Message.new(phone_number: 'number', text: 'hello world') # initialize a new message with the params described in the ongair API
+  message.deliver! # or message.deliver_to('4912345678')
 
 ```
+
+## ToDo:
+
+* support for more ongair message endpoints
+* support for handling contacts
+* support for groups
+* sending broadcasts
+* support for message receipts 
+
+Want to help? :green_heart:
+
+------------
+
+Built with love by [@njirap](https://twitter.com/njirap) and [@bumi](https://twitter.com/bumi) in Nairobi and released under the MIT-Licence.
+
