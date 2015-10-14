@@ -6,16 +6,12 @@ require 'ongair/version'
 Gem::Specification.new do |spec|
   spec.name          = "ongair"
   spec.version       = Ongair::VERSION
-  spec.authors       = ["Michael Bumann"]
-  spec.email         = ["michael@railslove.com"]
+  spec.authors       = ["Michael Bumann", "Njirap"]
+  spec.email         = ["michael@railslove.com", "njirap@gmail.com"]
 
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
-  end
-
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{simple API wrapper around the ongair.im API}
+  spec.description   = %q{This API wrapper allows you to interact with the ongair.im API to receive and to send messages. (currently whatsapp only)}
+  spec.homepage      = "http://michaelbumann.com"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
