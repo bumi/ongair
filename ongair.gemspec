@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.email         = ["michael@railslove.com", "njirap@gmail.com"]
 
   spec.summary       = %q{simple API wrapper around the ongair.im API}
-  spec.description   = %q{This API wrapper allows you to interact with the ongair.im API to receive and to send messages. (currently whatsapp only)}
-  spec.homepage      = "http://michaelbumann.com"
+  spec.description   = %q{This API wrapper allows you to interact with the ongair.im API to receive and to send messages. (currently whatsapp and wechat)}
+  spec.homepage      = "https://github.com/bumi/ongair"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
