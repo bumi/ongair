@@ -31,7 +31,7 @@ Or install it yourself as:
   message.image
   # see lib/ongair/message.rb for details
 
-  # sending messages:
+  # sending messages (currently text and images are supported)
   message = Ongair::Message.new(phone_number: 'number', text: 'hello world') # initialize a new message with the params described in the ongair API
   message.deliver! # or message.deliver_to('4912345678')
 
