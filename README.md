@@ -36,9 +36,15 @@ Or install it yourself as:
   message.deliver! # or message.deliver_to('4912345678')
 
 ```
+## Project Status: 
+
+**experimental.**
+It is simple and seems to work fine. But it is currently still lacking essential features and specs.
+
 
 ## ToDo:
 
+* specs: please not this gem is currently experimental
 * support for more ongair message endpoints
 * support for handling contacts
 * support for groups
